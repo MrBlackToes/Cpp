@@ -37,7 +37,7 @@ Node *Reverse(Node *head)
     }
     return last->prev;
 }
-Node *DoubleListConvert(vector<int> &arr) // Converts vector to Double Linked List
+Node *DoublyListConvert(vector<int> &arr) // Converts vector to Doubly Linked List
 {
     Node *head = new Node(arr[0]);
     Node *mover = head;
@@ -61,7 +61,7 @@ void print(Node *head)
 int main()
 {
     vector<int> v = {1, 2, 3, 4, 5, 6}; // Need to use #include<vector> to use
-    Node *head = DoubleListConvert(v);
+    Node *head = DoublyListConvert(v);
     print(head);
     head = Reverse(head);
     print(head);
