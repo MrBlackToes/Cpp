@@ -15,8 +15,7 @@ int scndLargest(int arr[], int n)
         {
             scndlargest = arr[i];
         }
-    }
-    return scndlargest;
+}
 }
 int main()
 {
