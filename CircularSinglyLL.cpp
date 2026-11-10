@@ -152,11 +152,6 @@ Node *deleteatindex(Node *tail)
         temp = temp->next;
         pos--;
     }
-    if (temp->next == temp)
-    {
-        cout << "Out of Bounds." << endl;
-        return tail;
-    }
     Node *temp2 = temp->next;
     if (temp2 == tail)
     {
@@ -165,18 +160,4 @@ Node *deleteatindex(Node *tail)
     temp->next = temp2->next;
     delete temp2;
     return tail;
-}
-int main()
-{
-    Node *tail = new Node(5);
-    tail->next = tail;
-    insertatstart(10, tail);
-    insertatend(20, tail);
-    insertatindex(3, 25, tail);
-    Traverse(tail);
-    // tail = deletestart(tail);
-    // tail = deleteend(tail);
-    tail = deleteatindex(tail);
-    Traverse(tail);
-    return 0;
 }
